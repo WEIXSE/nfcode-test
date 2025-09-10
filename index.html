@@ -791,6 +791,525 @@
         .type-option.active .custom-input::placeholder {
             color: var(--gray-600);
         }
+
+        /* History Section */
+        .history {
+            background-color: var(--dark-gray);
+            padding: 120px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--medium-gray);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            position: relative;
+            margin-bottom: 60px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            padding-left: 30px;
+            padding-right: 0;
+            left: 50%;
+        }
+
+        .timeline-date {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            position: absolute;
+            top: 0;
+            right: -80px;
+            background: var(--black);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid var(--medium-gray);
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+            right: auto;
+            left: -80px;
+        }
+
+        .timeline-content {
+            background: var(--black);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--medium-gray);
+            width: 100%;
+        }
+
+        .timeline-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .timeline-content p {
+            color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 120px 0;
+            background-color: var(--black);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background-color: var(--dark-gray);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-content {
+            margin-bottom: 25px;
+        }
+
+        .rating {
+            color: gold;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-content p {
+            color: var(--off-white);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--medium-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .author-info span {
+            color: var(--light-gray);
+            font-size: 14px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 120px 0;
+            background-color: var(--dark-gray);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 25px;
+            text-align: left;
+            background-color: var(--black);
+            border: none;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--medium-gray);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--black);
+        }
+
+        .faq-answer.active {
+            padding: 25px;
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            color: var(--off-white);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 100px 0;
+            background-color: var(--black);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .stat-label {
+            color: var(--light-gray);
+            font-size: 18px;
+        }
+
+        /* Blog Preview Section */
+        .blog-preview {
+            padding: 120px 0;
+            background-color: var(--dark-gray);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            background-color: var(--black);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-image {
+            height: 200px;
+            background-color: var(--medium-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--white);
+        }
+
+        .blog-content {
+            padding: 30px;
+        }
+
+        .blog-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .blog-content p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .read-more i {
+            margin-left: 10px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--light-gray);
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background-color: var(--black);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column .logo {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .footer-column p {
+            color: var(--light-gray);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--medium-gray);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--white);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--white);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul li a,
+        .footer-column ul li {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column ul li i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--medium-gray);
+        }
+
+        .footer-bottom p {
+            color: var(--light-gray);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+                left: 0;
+            }
+
+            .timeline-date {
+                left: 0;
+                right: auto;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 48px;
+            }
+
+            .cta-content h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 50px;
+            }
+
+            .timeline-date {
+                font-size: 18px;
+                padding: 8px 15px;
+                right: auto;
+                left: -40px;
+            }
+
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1101,7 +1620,341 @@
             </div>
         </div>
     </section>
+    <!-- History Section -->
+    <section id="history" class="history">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наша история</h2>
+                <p>Как мы стали лидерами в создании NFC решений</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Начало пути</h3>
+                        <p>Основание компании с фокусом на создании доступных NFC решений для повседневного использования</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Первые инновации</h3>
+                        <p>Запустили первую партию программируемых NFC меток с индивидуальной настройкой под клиента</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Расширение ассортимента</h3>
+                        <p>Добавили в каталог NFC брелоки и карты, став полноценным поставщиком NFC решений</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Премиум линейка</h3>
+                        <p>Запустили премиум продукты с улучшенными характеристиками и дизайном</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Международное признание</h3>
+                        <p>Начали поставки в Европу и США, получили первые международные награды</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Технологический прорыв</h3>
+                        <p>Разработали собственную технологию увеличения памяти NFC меток на 40%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Отзывы клиентов</h2>
+                <p>Что говорят наши клиенты о NFC PROXY</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Использую NFC метки для автоматизации дома. Купил 5 штук и теперь все работает как часы. Кофе готовится утром автоматически, свет включается при входе в комнату. Магия!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Алексей Иванов</h4>
+                            <span>Москва</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Заказала NFC визитку для бизнеса. Клиенты в восторге - просто подносят телефон и сразу получают все мои контакты и ссылки. Выглядит стильно и работает безупречно."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Мария Смирнова</h4>
+                            <span>Санкт-Петербург</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Приобрел NFC кольцо для себя в качестве эксперимента. Теперь не представляю жизнь без него. Открываю двери, запускаю авто, делюсь контактами - все одним касанием."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Дмитрий Петров</h4>
+                            <span>Казань</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Все, что вы хотели знать о NFC технологиях</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Что такое NFC и как это работает?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>NFC (Near Field Communication) — это технология беспроводной связи малого радиуса действия, которая позволяет обмениваться данными между устройствами на расстоянии до 10 см. NFC метки содержат чип и антенну, которые активируются при поднесении смартфона с поддержкой NFC.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Какие смартфоны поддерживают NFC?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Большинство современных смартфонов среднего и высшего ценового сегмента поддерживают NFC. Это все iPhone начиная с модели 6, большинство Android-смартфонов Samsung, Xiaomi, Huawei, Google Pixel и других брендов, выпущенных после 2015 года.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Сколько данных можно записать на NFC метку?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Объем памяти зависит от типа метки: NTAG215 (наклейки) — 144 байта, что достаточно для ссылки или контакта; NTAG216 (брелоки, карты, кольца) — 888 байтов, позволяют хранить больше информации, включая несколько команд или более сложные сценарии.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Как происходит настройка меток?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>После оформления заказа наш специалист свяжется с вами для уточнения деталей настройки. Мы программируем метки согласно вашим требованиям: настраиваем URL-адреса, контакты, команды умного дома, Wi-Fi данные или другие функции. После программирования метки тестируются и отправляются вам.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Можно ли перезаписать метку после получения?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, большинство наших меток поддерживают перезапись (кроме некоторых защищенных вариантов). Вы можете использовать приложения для NFC на своем смартфоне, чтобы изменить запрограммированные данные. Мы предоставляем инструкции по самостоятельной перезаписи.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Как долго служат NFC метки?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Срок службы зависит от типа метки: наклейки — 10,000+ срабатываний, брелоки и карты — 100,000+ срабатываний, премиум метки в металлическом корпусе — 500,000+ срабатываний. Гарантия на все продукты — 2 года.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="25000">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="120000">0</div>
+                    <div class="stat-label">Продано меток</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Уровень удовлетворенности</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Стран доставки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Полезные материалы</h2>
+                <p>Узнайте больше о возможностях NFC технологий</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>10 способов использования NFC в умном доме</h3>
+                        <p>Как автоматизировать рутинные задачи с помощью NFC метки</p>
+                        <a href="#" class="read-more">Читать статью <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>NFC для бизнеса: новые возможности</h3>
+                        <p>Как компании используют NFC технологии для улучшения клиентского опыта</p>
+                        <a href="#" class="read-more">Читать статью <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Сравнение NFC меток 2024</h3>
+                        <p>Подробный обзор различных типов NFC меток и их возможностей</p>
+                        <a href="#" class="read-more">Читать статью <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Готовы автоматизировать свою жизнь?</h2>
+                <p>Выберите подходящее NFC решение и начните использовать технологии будущего уже сегодня</p>
+                <a href="#products" class="btn">Выбрать решение</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-wave-square"></i>
+                        <span>NFC PROXY</span>
+                    </div>
+                    <p>Современные NFC решения для вашего цифрового образа жизни. Технологии, которые работают на вас.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Продукты</h3>
+                    <ul>
+                        <li><a href="#products">NFC Кольцо</a></li>
+                        <li><a href="#products">NFC Наклейки</a></li>
+                        <li><a href="#products">NFC Карта</a></li>
+                        <li><a href="#products">NFC Брелок</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#history">О нас</a></li>
+                        <li><a href="#how-it-works">Как это работает</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
+                        <li><a href="#blog">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Поддержка</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@nfcproxy.ru">info@nfcproxy.ru</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Технологическая, 42</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NFC PROXY. Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Feedback Modal -->
     <div class="overlay" id="overlay"></div>
     <div class="feedback-modal" id="feedbackModal">
@@ -1136,6 +1989,7 @@
             </div>
             <button type="submit" class="btn submit-btn">Отправить заказ</button>
         </form>
+        
     </div>
 
     <!-- Остальные секции (History, Testimonials, FAQ, Stats, Blog, CTA, Footer) остаются без изменений -->
@@ -1601,6 +2455,38 @@
             const header = document.getElementById('header');
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
+
+                // Animate stats counting
+                function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Intersection Observer for stats animation
+        const statsSection = document.querySelector('.stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.stat-number').forEach(stat => {
+                        const target = parseInt(stat.getAttribute('data-count'));
+                        animateValue(stat, 0, target, 2000);
+                    });
+                    statsObserver.unobserve(statsSection);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
     </script>
 </body>
 </html>
